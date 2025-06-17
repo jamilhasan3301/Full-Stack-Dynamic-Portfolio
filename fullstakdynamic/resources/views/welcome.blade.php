@@ -9,15 +9,18 @@
 </head>
 <body>
     <div>
-        <nav>
+        <nav class="navbar">
             <div class="logo">jamil</div>
             <p>
-                home 
+                home
+            </p>
+            <p>
                 about
+            </p>
+            <p>
                 service
             </p>
         </nav>
-    </div>
     <div>
         <h2>Hello, I'm<br>Jamil Hasan</h2>
         <div class="stats">
@@ -25,8 +28,11 @@
             <div>250+</div>
             <div>58</div>
         </div>
+        <div class="about-me-buton" onclick="showtitle()">About me </div>
+        <div class="about-me-buton" onclick="showtitle1()">home </div>
     </div>
     <div>
         <div><img src="{{asset('image\196415165.jpg')}}" alt="photo"></div>
+        <script src="{{asset('assets\js\script.js')}}"></script>
 </body>
 </html>
