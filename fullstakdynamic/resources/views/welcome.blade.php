@@ -1,38 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jamil hasan portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+@extends('index')
+@push('style')
+@section('main-content')
 <body>
     <div>
-        <nav class="navbar">
-            <div class="logo">jamil</div>
-            <p>
+    <nav style="display: flex; align-item: center;justify-content: space-between" class="navbar">
+            <div class="logo">
+            <div>
+               <h3>jamil</h3>
+</div>
+            </div>
+            <div style="display: flex; align-item: center;justify-items: center">
+
+            <div>
                 home
-            </p>
-            <p>
+            </div>
+            <div>
                 about
-            </p>
-            <p>
+            </div>
+            <div>
                 service
-            </p>
+            </div>
+            </div>
         </nav>
-    <div>
-        <h2>Hello, I'm<br>Jamil Hasan</h2>
-        <div class="stats">
-            <div>15%</div>
-            <div>250+</div>
-            <div>58</div>
-        </div>
-        <div class="about-me-buton" onclick="showtitle()">About me </div>
-        <div class="about-me-buton" onclick="showtitle1()">home </div>
     </div>
-    <div>
-        <div><img src="{{asset('image\196415165.jpg')}}" alt="photo"></div>
+    <section id="home" class="hero">
+        <div class="intro1">
+             <h2>Hello, I'm<span>Jamil Hasan</span></h2>
+            <p>UI/UX | Frontend | Designer </p>   
+            <div class="button">
+               <button> Hire Me</button>
+               <button>Download CV</button>
+             </div>
+        </div>
+    </section>
+        
+    
+       <div class="hero1">
+            <div>
+              <img src="https://avatars.githubusercontent.com/u/196415165?v=4">
+            </div>
+            <div class="intro">
+              <p>I am a professional.</br>
+              User Experience Designer</p>
+            </div>
+        </div>
+
+    <div class="stats">
+            <div><a href="#">LinkedIn</a> |</div>
+            <div><a href="#">Github</a> |</div>
+            <div><a href="#">Email</a> |</div>
+    </div>
+
+    <section id="about" class="process">
+        <h2>Work Process</h2>
+        <ul>
+            <li>discover</li>
+            <li>Research</li>
+            <li>Workframe</li>
+            <li>Design</li>  
+    </section>
+    <section id="portfolio">
+        <h2>my project</h2>
+        <div class="project">project 1</div>
+        <div class="project">project 2</div>
+        <div class="project">project 3</div>
+        <div class="project">project 4</div>
+
+    </section>
+    <footer>
+        <p> © 2025 Jamil Hasan. All Right Reserved.</p>
+    </footer>
         <script src="{{asset('assets\js\script.js')}}"></script>
 </body>
 </html>
