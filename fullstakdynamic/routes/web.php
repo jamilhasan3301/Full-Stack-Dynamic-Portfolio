@@ -21,3 +21,8 @@ Route::get('/', function () {
 Route::get('/lp1', function () {
     return view('lp1');
 });
+
+Route::get('/', function () {
+    return view('portfolio');
+});
+
