@@ -53,7 +53,7 @@
     </section>
 
     <!-- Professional Section as card -->
-    <section style="display: flex; gap: 32px; align-items: center; margin-bottom: 40px;">
+    <section style="display: flex; gap: 32px; align-items: center; margin-bottom: 40px; background-color: aqua; padding: 20px;">
         <div class="pro-card" style="width:280px; height:180px; background:#fff; border-radius:16px; border:1px solid #eee; box-shadow:0 2px 16px rgba(0,0,0,0.06); display:flex; align-items:end; justify-content:center; position:relative; overflow:hidden;">
             <!-- Pro Card Image -->
             <img src="{{ asset('assets/image/pro-card.jpg') }}" alt="Pro Card" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; border-radius:16px; z-index:0;">
@@ -71,12 +71,8 @@
                 <hr style="width: 60px; border: 1px solid #000; margin: 8px 0;">
             </div>
             <div style="display: flex; gap: 16px;">
-                <a href="#contact">
-                    <button style="padding: 8px 18px; border-radius: 6px; border: none; background: #222; color: #fff;">Hire Me</button>
-                </a>
-                <a href="#portfolio">
-                    <button style="padding: 8px 18px; border-radius: 6px; border: 1px solid #222; background: #fff; color: #222;">Portfolio</button>
-                </a>
+                <button style="padding: 8px 18px; border-radius: 6px; border: none; background: #222; color: #fff;">Hire Me</button>
+                <button style="padding: 8px 18px; border-radius: 6px; border: 1px solid #222; background: #fff; color: #222;">Portfolio</button>
             </div>
         </div>
     </section>

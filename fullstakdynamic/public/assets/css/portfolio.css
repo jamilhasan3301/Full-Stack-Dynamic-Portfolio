@@ -18,7 +18,7 @@ body {
 }
 .navbar a:hover {
     background: #222;
-    color: #fff;
+    color: #10e441;
     box-shadow: 0 2px 8px rgba(0,0,0,0.10);
 }
 .logo h3 {
@@ -37,7 +37,7 @@ button {
 }
 button:hover {
     background: #444;
-    color: #fff;
+    color: #de0606;
     transform: scale(1.05);
     box-shadow: 0 4px 16px rgba(0,0,0,0.12);
 }
