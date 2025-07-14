@@ -6,15 +6,15 @@
 <body>
     <div>
         <!-- Header/Navbar -->
-        <nav style="display: flex; align-items: center; justify-content: space-between; padding: 20px 0;" class="navbar">
+         <nav class="navbar">
             <div class="logo">
                 <h3 style="margin:0;">Jamil</h3>
             </div>
             <div style="display: flex; gap: 24px; align-items: center;">
-                <div><a href="{{ url('/') }}">Home</a></div>
-                <div><a href="#about">About</a></div>
-                <div><a href="#service">Service</a></div>
-                <div><a href="#contact" style="border:1px solid #000; padding:2px 10px; border-radius:5px;">Contact</a></div>
+                <a href="{{ url('/') }}">Home</a>
+                <a href="{{ url('/about') }}">About</a>
+                <a href="#service">Service</a>
+                <a href="#contact" class="contact-link">Contact</a>
             </div>
         </nav>
     </div>
@@ -71,8 +71,10 @@
                 <hr style="width: 60px; border: 1px solid #000; margin: 8px 0;">
             </div>
             <div style="display: flex; gap: 16px;">
-                <button style="padding: 8px 18px; border-radius: 6px; border: none; background: #222; color: #fff;">Hire Me</button>
-                <button style="padding: 8px 18px; border-radius: 6px; border: 1px solid #222; background: #fff; color: #222;">Portfolio</button>
+                <a href="#contact">
+                    <button class="hire-me-btn">Hire Me</button>
+                </a>
+                <button class="portfolio-btn">Portfolio</button>
             </div>
         </div>
     </section>
@@ -99,10 +101,47 @@
         </div>
     </section>
 
+    <!-- contact section -->
+    <section id="contact" style="padding: 40px 32px; background: #f4f4f4;">
+        <h2>Contact Me</h2>
+        <form action="send-email.php" method="POST" style="max-width: 500px;">
+            <div style="margin-bottom: 12px;">
+                <label for="name">Your Name :</label><br>
+                <input type="text" id="name" name="name" required style="width: 100%; padding: 10px;">
+            </div>
+            <div style="margin-bottom: 12px;">
+                <label for="email">Your Email :</label><br>
+                <input type="email" id="email" name="email" required style="width: 100%; padding: 10px;">
+            </div>
+            <div style="margin-bottom: 12px;">
+                <label for="message">Message</label><br>
+                <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 10px;"></textarea>
+            </div>
+            <button type="submit" style="padding: 10px 20px; border: none; background: #222; color: #fff; border-radius: 6px; cursor: pointer;">Send Message</button>
+        </form>
+    </section>
+
+    <!-- footer Section -->
     <hr style="border:none; border-top:1px solid #eee; margin:40px 0 0 0;">
-    <footer style="margin-top: 0; text-align: center;">
-        <p>© 2025 Jamil Hasan. All Right Reserved.</p>
+    <footer style="margin-top: 0; text-align: center; padding: 20px 0; background: #fff; border-top: 1px solid #eee;">
+        <p>© 2025 Jamil Hasan. All Rights Reserved.</p>
+        <div style="margin-top: 10px;">
+            <a href="https://facebook.com/jamilhasan3301" target="_blank" rel="noopener" style="margin: 0 10px; color: #3b5998; font-size: 22px;">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://instagram.com/jamilhasan6857" target="_blank" rel="noopener" style="margin: 0 10px; color: #1da1f2; font-size: 22px;">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://linkedin.com/in/ja.mil_bruh" target="_blank" rel="noopener" style="margin: 0 10px; color: #0077b5; font-size: 22px;">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/jamilhasan3301" target="_blank" rel="noopener" style="margin: 0 10px; color: #333; font-size: 22px;">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
     </footer>
+
     <script src="{{ asset('assets/js/script.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('assets/css/portfolio.css') }}">
 </body>
 @endsection
