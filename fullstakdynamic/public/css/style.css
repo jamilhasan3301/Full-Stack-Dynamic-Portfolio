@@ -1245,30 +1245,73 @@ textarea {
 
 /* Contact Section */
 .contact {
-  background: linear-gradient(120deg, var(--theme-color-primary) 0%, #1a7ac7 100%), url(../../assets/svg/common-bg.svg);
-  background-size: 400% 400%, cover;
-  animation: gradientBG 8s ease-in-out infinite;
-  background-position: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 8rem 0;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
+  transform: translateZ(-1px) scale(2);
+  z-index: 1;
+}
+
+.contact .main-container {
+  position: relative;
+  z-index: 2;
+}
+
+.contact .heading-sec__main--lt {
+  color: white;
+  font-size: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact .heading-sec__main--lt::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 6px;
+  background: #0062b9;
+  border-radius: 3px;
+  animation: expand-width 1s ease-out 0.5s both;
 }
 
 .contact__form-container {
-  background: rgba(255, 255, 255, 0.18);
-  box-shadow: 0 8px 32px 0 rgba(0, 98, 185, 0.18);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(0, 98, 185, 0.2);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+  border: 1px solid rgba(255,255,255,0.2);
   padding: 4rem;
   margin-top: 6rem;
   max-width: 80rem;
   text-align: right;
   width: 95%;
-  border-radius: var(--common-border-radius);
+  border-radius: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin: 5rem auto 0 auto;
 }
 
 .contact__form-container:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 18px 50px rgba(0,0,0,0.15);
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -1288,7 +1331,7 @@ textarea {
 }
 
 .contact__form-label {
-  color: #666;
+  color: #333;
   font-size: 1.4rem;
   letter-spacing: 1px;
   font-weight: 700;
@@ -1297,30 +1340,31 @@ textarea {
   text-align: left;
   transition: transform 0.3s ease, color 0.3s ease;
   position: relative;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
 
 .contact__form-field.focused .contact__form-label {
   transform: translateY(-25px) scale(0.8);
-  color: var(--theme-color-primary);
+  color: #667eea;
 }
 
 .contact__form-input {
   color: #333;
   padding: 2rem;
   width: 100%;
-  border: 1px solid rgb(235, 235, 235);
+  border: 1px solid rgba(0,0,0,0.1);
   font-size: 1.6rem;
   letter-spacing: 0px;
-  background: rgba(240, 240, 240, 1);
-  border-radius: var(--common-border-radius);
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
   font-weight: 600;
   transition: border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact__form-input:focus {
-  border-color: var(--theme-color-primary);
+  border-color: #667eea;
   background-color: #fff;
-  box-shadow: 0 0 0 3px rgba(0, 98, 185, 0.1);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
   outline: none;
 }
 

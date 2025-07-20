@@ -25,7 +25,7 @@
               <a href="#projects" class="header__link">Projects</a>
             </li>
             <li class="header__link-wrapper">
-              <a href="{{ route('contact') }}" class="header__link">Contact</a>
+              <a href="#contact" class="header__link">Contact</a>
             </li>
           </ul>
           <div class="header__main-ham-menu-cont">
@@ -166,8 +166,7 @@
         <h2 class="heading heading-sec heading-sec__mb-bg">
           <span class="heading-sec__main">Projects</span>
           <span class="heading-sec__sub">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis
-            tempora explicabo quae quod deserunt eius sapiente
+          Responsive portfolio website built with HTML, CSS, and Laravel Blade to showcase personal work.
           </span>
         </h2>
 
@@ -184,9 +183,7 @@
             <div class="projects__row-content">
               <h3 class="projects__row-content-title">Project 1</h3>
               <p class="projects__row-content-desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
-                facilis tempora, explicabo quae quod deserunt eius sapiente
-                praesentium.
+              A dynamic web application showcasing project details, skills, and contact information in a user-friendly layout
               </p>
               <a
                 href="./project-1.html"
@@ -208,9 +205,7 @@
             <div class="projects__row-content">
               <h3 class="projects__row-content-title">Project 2</h3>
               <p class="projects__row-content-desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
-                facilis tempora, explicabo quae quod deserunt eius sapiente
-                praesentium.
+              A Laravel Blade-powered portfolio site with dynamic project listings and a responsive, modern design.
               </p>
               <a
                 href="./project-2.html"
@@ -232,9 +227,7 @@
             <div class="projects__row-content">
               <h3 class="projects__row-content-title">Project 3</h3>
               <p class="projects__row-content-desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
-                facilis tempora, explicabo quae quod deserunt eius sapiente
-                praesentium.
+              Responsive portfolio website built with HTML, CSS, and Laravel Blade to showcase personal work.
               </p>
               <a
                 href="./project-3.html"
@@ -247,10 +240,10 @@
         </div>
       </div>
     </section>
-    <section id="contact" class="contact sec-pad dynamicBg">
+    <section id="contact" class="contact sec-pad">
       <div class="main-container">
         <h2 class="heading heading-sec heading-sec__mb-med">
-          <span class="heading-sec__main heading-sec__main--lt">Contact</span>
+          <span class="heading-sec__main heading-sec__main--lt">CONTACT</span>
         </h2>
         <div class="contact__form-container">
           <form action="#" class="contact__form">
@@ -488,6 +481,32 @@
               });
             }
           });
+        });
+
+        const contactFields = document.querySelectorAll('.contact__form-field');
+        
+        contactFields.forEach(field => {
+          const input = field.querySelector('.contact__form-input');
+          const label = field.querySelector('.contact__form-label');
+          
+          if (input && label) {
+            // Add focused class on focus
+            input.addEventListener('focus', function() {
+              field.classList.add('focused');
+            });
+            
+            // Remove focused class on blur if no value
+            input.addEventListener('blur', function() {
+              if (!this.value.trim()) {
+                field.classList.remove('focused');
+              }
+            });
+            
+            // Check if input has value on page load
+            if (input.value.trim()) {
+              field.classList.add('focused');
+            }
+          }
         });
       });
     </script>
