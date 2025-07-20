@@ -53,9 +53,6 @@
               Welcome to my journey through code and creativity.
             </p>
           </div>
-          <div class="home-hero__cta">
-            <a href="{{ url('/#projects') }}" class="btn btn--gradient hover-reveal">Projects</a>
-          </div>
         </div>
         <div class="home-hero__card">
           <div class="profile-card">
@@ -68,6 +65,9 @@
                 <p class="profile-card__subtitle">Full Stack Developer</p>
               </div>
             </div>
+          </div>
+          <div class="home-hero__cta" style="margin-top: 2rem; text-align: center;">
+            <a href="{{ url('/#projects') }}" class="btn btn--gradient hover-reveal">Projects</a>
           </div>
         </div>
         <div class="home-hero__socials">
@@ -482,6 +482,24 @@
             }
           });
         });
+
+        // Handle anchor links in URL on page load
+        if (window.location.hash) {
+          setTimeout(function() {
+            const targetId = window.location.hash;
+            const targetSection = document.querySelector(targetId);
+            
+            if (targetSection) {
+              const headerHeight = document.querySelector('.header').offsetHeight;
+              const targetPosition = targetSection.offsetTop - headerHeight - 20;
+              
+              window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+              });
+            }
+          }, 100);
+        }
 
         const contactFields = document.querySelectorAll('.contact__form-field');
         

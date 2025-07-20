@@ -11,9 +11,9 @@ Route::get('/about', function () {
 })->name('about');
 
 Route::get('/projects', function () {
-    return view('projects');
+    return redirect('/#projects');
 })->name('projects');
 
 Route::get('/contact', function () {
-    return view('contact');
+    return redirect('/#contact');
 })->name('contact');

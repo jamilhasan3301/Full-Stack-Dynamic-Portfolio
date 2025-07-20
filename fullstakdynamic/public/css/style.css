@@ -809,6 +809,7 @@ textarea {
   margin: 2.5rem 0 4rem 0;
   max-width: 50rem;
   font-family: 'Inter', Arial, sans-serif;
+  text-align: left;
 }
 
 .home-hero__cta {
@@ -820,7 +821,7 @@ textarea {
 .home-hero__card {
   position: absolute;
   top: 60%;
-  right: 2rem;
+  right: -2rem;
   transform: translateY(-50%);
   z-index: 10;
 }
@@ -895,8 +896,8 @@ textarea {
 
 .profile-card {
   position: relative;
-  width: 400px;
-  height: 500px;
+  width: 320px;
+  height: 400px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border-radius: 20px;
@@ -1022,8 +1023,8 @@ textarea {
   }
   
   .profile-card {
-    width: 300px;
-    height: 380px;
+    width: 260px;
+    height: 325px;
   }
   
   .profile-card__overlay {
@@ -1060,8 +1061,8 @@ textarea {
 
 @media (max-width: 480px) {
   .profile-card {
-    width: 180px;
-    height: 230px;
+    width: 160px;
+    height: 200px;
   }
   
   .profile-card__title {
