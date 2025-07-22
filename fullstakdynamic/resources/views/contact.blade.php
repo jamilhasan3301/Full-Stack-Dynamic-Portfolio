@@ -21,7 +21,12 @@
         <div class="hero-bg-shape"></div>
         <div style="max-width:500px; margin:40px auto; background:#fff; border-radius:12px; box-shadow:0 2px 16px rgba(0,0,0,0.06); padding:32px;">
             <h2 style="margin-bottom:18px;">Contact Me</h2>
-            <form action="#" method="post">
+            @if(session('contact'))
+                <div style="background: #d4edda; color: #155724; border: 1px solid #c3e6cb; border-radius: 8px; padding: 16px; margin-bottom: 20px;">
+                    <strong>Success!</strong> Your message has been sent. Thank you, {{ session('contact')->name }}!
+                </div>
+            @endif
+            <form action="{{ route('contact.store') }}" method="post">
                 @csrf
                 <div style="margin-bottom:16px;">
                     <label for="name" style="display:block; margin-bottom:6px;">Name</label>
@@ -37,6 +42,14 @@
                 </div>
                 <button type="submit" style="padding:10px 24px; border-radius:6px; background:#222; color:#fff; border:none;">Send</button>
             </form>
+            @if(session('contact'))
+                <div class="contact-box" style="background: #f8f9fa; border: 2px solid #007bff; border-radius: 8px; padding: 20px; margin: 20px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.05); max-width: 400px;">
+                    <h3 style="color: #007bff; margin-bottom: 10px;">Contact Submitted!</h3>
+                    <p style="margin: 5px 0;"><strong>Name:</strong> {{ session('contact')->name }}</p>
+                    <p style="margin: 5px 0;"><strong>Email:</strong> {{ session('contact')->email }}</p>
+                    <p style="margin: 5px 0;"><strong>Message:</strong> {{ session('contact')->message }}</p>
+                </div>
+            @endif
         </div>
     </section>
 </body>
