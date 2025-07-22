@@ -6,8 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="{{url('/login')}}" method="POST">
+    <form action="{{url('/registration')}}" method="POST">
         @csrf
+        <div>
+            <label for="name">Name:</label>
+            <input type="name" placeholder="name" id="name" name="name" required>
+        </div>
         <div>
             <label for="email">Email:</label>
             <input type="email" placeholder="email" id="email" name="email" required>
@@ -16,6 +20,6 @@
             <label for="password">Password:</label>
             <input type="password" placeholder="password" name="password" required>
         </div>
-        <button type="submit">Login</button>
+        <button type="submit">registration</button>
 </body>
 </html>
