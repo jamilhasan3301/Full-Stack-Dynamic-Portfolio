@@ -21,9 +21,9 @@
         <div class="hero-bg-shape"></div>
         <div style="max-width:500px; margin:40px auto; background:#fff; border-radius:12px; box-shadow:0 2px 16px rgba(0,0,0,0.06); padding:32px;">
             <h2 style="margin-bottom:18px;">Contact Me</h2>
-            @if(session('contact'))
+            @if(session('success'))
                 <div style="background: #d4edda; color: #155724; border: 1px solid #c3e6cb; border-radius: 8px; padding: 16px; margin-bottom: 20px;">
-                    <strong>Success!</strong> Your message has been sent. Thank you, {{ session('contact')->name }}!
+                    <strong>Success!</strong> {{ session('success') }}
                 </div>
             @endif
             <form action="{{ route('contact.store') }}" method="post">

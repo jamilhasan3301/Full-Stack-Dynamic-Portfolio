@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('phone')->nullable();
             $table->string('avatar')->nullable();
             $table->string('student_id')->nullable();
+            $table->rememberToken();
             $table->timestamps();
         });
     }
@@ -28,6 +29,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+    \DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+    Schema::dropIfExists('users');
+    \DB::statement('SET FOREIGN_KEY_CHECKS=1;');
     }
 };

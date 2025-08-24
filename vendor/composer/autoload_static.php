@@ -86,6 +86,10 @@ class ComposerStaticInitcd5a93f1da2946211f05db13c173f822
             'Psr\\Clock\\' => 10,
             'PhpOption\\' => 10,
         ),
+        'N' => 
+        array (
+            'Nette\\' => 6,
+        ),
         'M' => 
         array (
             'Monolog\\' => 8,
@@ -294,6 +298,10 @@ class ComposerStaticInitcd5a93f1da2946211f05db13c173f822
         array (
             0 => __DIR__ . '/..' . '/phpoption/phpoption/src/PhpOption',
         ),
+        'Nette\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nette/utils/src',
+        ),
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
@@ -358,7 +366,7 @@ class ComposerStaticInitcd5a93f1da2946211f05db13c173f822
         ),
         'Doctrine\\Inflector\\' => 
         array (
-            0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Inflector',
+            0 => __DIR__ . '/..' . '/doctrine/inflector/src',
         ),
         'Doctrine\\Common\\Lexer\\' => 
         array (

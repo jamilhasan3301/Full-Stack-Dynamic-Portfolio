@@ -240,13 +240,55 @@
         </div>
       </div>
     </section>
+    <style>
+        .alert {
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+        .alert-success {
+            color: #155724;
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
+        .alert-danger {
+            color: #721c24;
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+        .alert ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+    </style>
     <section id="contact" class="contact sec-pad">
       <div class="main-container">
         <h2 class="heading heading-sec heading-sec__mb-med">
           <span class="heading-sec__main heading-sec__main--lt">CONTACT</span>
         </h2>
+        @if(session('success'))
+          <div class="alert alert-success">
+              {{ session('success') }}
+          </div>
+        @endif
+        @if(session('error'))
+          <div class="alert alert-danger">
+              {{ session('error') }}
+          </div>
+        @endif
+        @if ($errors->any())
+          <div class="alert alert-danger">
+              <ul>
+                  @foreach ($errors->all() as $error)
+                      <li>{{ $error }}</li>
+                  @endforeach
+              </ul>
+          </div>
+        @endif
         <div class="contact__form-container">
-          <form action="#" class="contact__form">
+          <form action="{{ route('contact.store') }}" method="POST" class="contact__form">
+            @csrf
             <div class="contact__form-field">
               <label class="contact__form-label" for="name">Name</label>
               <input
